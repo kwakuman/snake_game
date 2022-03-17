@@ -4,6 +4,8 @@ from food import Food
 from scoreboard import Scoreboard
 import time
 
+HIGHSCORE_DATA_FILE = 'data.txt'
+
 # set up game screen
 screen = Screen()
 screen.setup(width=600,height=600)
@@ -14,7 +16,7 @@ screen.tracer(0)
 snake = Snake()
 
 food = Food()
-scoreboard = Scoreboard()
+scoreboard = Scoreboard(HIGHSCORE_DATA_FILE)
 screen.update()
 
 
